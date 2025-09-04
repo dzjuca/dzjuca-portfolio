@@ -1,1 +1,25 @@
-<p>footer works!</p>
+<footer class="footer-container">
+  <div class="footer-content">
+    <!-- Navegación del Footer -->
+    <nav class="footer-nav">
+      <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About</a></li>
+        <li><a routerLink="/projects">Projects</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Separador y sección inferior -->
+    <div class="footer-bottom">
+      <p class="copyright">
+        &copy; {{ currentYear }} dzjuca. All Rights Reserved.
+      </p>
+      <div class="social-links">
+        <a href="https://github.com/dzjuca" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/dzjuca" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://x.com/daniel3959" target="_blank" rel="noopener noreferrer">Twitter</a>
+      </div>
+    </div>
+  </div>
+</footer>

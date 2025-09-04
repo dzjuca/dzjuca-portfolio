@@ -1,0 +1,122 @@
+// :host nos permite aplicar estilos al componente raíz de la página
+:host {
+  display: block;
+  // Añadimos padding superior para que el contenido no quede oculto bajo el Header fijo
+  padding-top: 120px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 120px); // Ocupa el alto de la pantalla menos el padding superior
+}
+
+.hero-content {
+  flex: 1; // Ocupa el espacio disponible
+  max-width: 55%;
+
+  .subtitle {
+    color: var(--color-accent);
+    font-size: 1.25rem; // 20px
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .title {
+    font-size: 3.75rem; // 60px
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 1rem 0;
+  }
+
+  .description {
+    color: var(--color-text-medium);
+    font-size: 1rem; // 16px
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    max-width: 90%; // Evita que el texto sea demasiado ancho
+  }
+
+  .btn {
+    // Reutilizamos la clase .btn del Header, pero podemos añadir o sobreescribir estilos aquí si es necesario
+    display: inline-block; // Asegura que el botón se comporte como un bloque
+  }
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 40%;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px; // Bordes ligeramente redondeados para la imagen
+  }
+}
+
+/* =============================================
+   Responsive Styles (Media Queries)
+   ============================================= */
+
+// Estilos para tablets y dispositivos más pequeños (hasta 992px)
+@media (max-width: 992px) {
+  .hero-container {
+    // Reducimos el espaciado en tablets
+    padding: 2rem;
+    min-height: auto; // Dejamos que la altura sea automática
+  }
+
+  .hero-content {
+    .title {
+      font-size: 3rem; // 48px
+    }
+  }
+}
+
+// Estilos para móviles (hasta 768px)
+@media (max-width: 768px) {
+  :host {
+    // Reducimos el padding superior para móviles
+    padding-top: 100px;
+  }
+
+  .hero-container {
+    // Cambiamos la dirección de flex a columna para apilar los elementos
+    flex-direction: column;
+    text-align: center; // Centramos todo el texto
+    padding: 1rem;
+  }
+
+  .hero-content {
+    // La imagen ahora estará arriba, así que el texto va después
+    order: 2;
+    max-width: 100%; // Ocupa todo el ancho
+
+    .subtitle {
+      font-size: 1rem; // 16px
+    }
+
+    .title {
+      font-size: 2.5rem; // 40px
+    }
+
+    .description {
+      max-width: 100%; // Ocupa todo el ancho
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .hero-image {
+    // La imagen va primero
+    order: 1;
+    max-width: 70%; // Hacemos la imagen un poco más pequeña
+    margin-bottom: 2rem;
+  }
+}
