@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* 1. Importar la tipografía principal desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+
+/* 2. Definir el ADN del diseño (colores y fuentes) como variables globales */
+:root {
+  /* Paleta de Colores */
+  --color-primary: #D81F2D; /* Rojo principal para botones y acciones */
+  --color-accent: #EF4040;  /* Rojo de acento para títulos */
+  --color-bg-dark: #111111; /* Fondo principal oscuro */
+  --color-bg-medium: #1E1E1E; /* Fondo para tarjetas y secciones */
+  --color-text-light: #FFFFFF; /* Texto principal blanco */
+  --color-text-medium: #C5C5C5; /* Texto secundario/párrafos */
+
+  /* Tipografía */
+  --font-family-main: 'Poppins', sans-serif;
+}
+
+/* 3. Aplicar estilos base al cuerpo de la aplicación */
+body {
+  margin: 0;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+  font-family: var(--font-family-main);
+}
+
