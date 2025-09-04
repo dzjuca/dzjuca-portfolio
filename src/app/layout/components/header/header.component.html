@@ -1,0 +1,21 @@
+<header class="header-container">
+  <!-- Sección del Logo -->
+  <div class="logo">
+    <a routerLink="/">dzjuca</a>
+  </div>
+
+  <!-- Navegación Principal -->
+  <nav class="nav-links">
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active-link">About</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active-link">Projects</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Botón de Llamada a la Acción (Call to Action) -->
+  <div class="cta-button">
+    <a routerLink="/contact" class="btn">Contact Me</a>
+  </div>
+</header>
