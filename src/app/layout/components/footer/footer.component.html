@@ -3,17 +3,18 @@
     <!-- Navegación del Footer -->
     <nav class="footer-nav">
       <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/about">About</a></li>
-        <li><a routerLink="/projects">Projects</a></li>
-        <li><a routerLink="/contact">Contact</a></li>
+        <li><a routerLink="/">{{ 'HEADER.NAV.HOME' | translate }}</a></li>
+        <li><a routerLink="/about">{{ 'HEADER.NAV.ABOUT' | translate }}</a></li>
+        <li><a routerLink="/projects">{{ 'HEADER.NAV.PROJECTS' | translate }}</a></li>
+        <li><a routerLink="/contact">{{ 'HEADER.NAV.CONTACT' | translate }}</a></li>
       </ul>
     </nav>
 
     <!-- Separador y sección inferior -->
     <div class="footer-bottom">
       <p class="copyright">
-        &copy; {{ currentYear }} dzjuca. All Rights Reserved.
+        <!-- ESTA ES LA LÍNEA MODIFICADA -->
+        {{ 'FOOTER.COPYRIGHT' | translate:{year: currentYear} }}
       </p>
       <div class="social-links">
         <a href="https://github.com/dzjuca" target="_blank" rel="noopener noreferrer">GitHub</a>

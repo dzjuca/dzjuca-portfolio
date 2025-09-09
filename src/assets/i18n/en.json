@@ -1,0 +1,33 @@
+{
+  "HEADER": {
+    "NAV": {
+      "HOME": "Home",
+      "ABOUT": "About",
+      "PROJECTS": "Projects",
+      "CONTACT": "Contact"
+    },
+    "CONTACT_BTN": "Contact Me"
+  },
+  "HOME": {
+    "HERO": {
+      "SUBTITLE": "Hello, I'm Daniel Zambrano Juca",
+      "TITLE": "Chemical Engineer & Full-Stack Developer",
+      "DESCRIPTION": "A fusion of engineering and creativity, specializing in building robust digital solutions and intuitive user experiences. My passion is to transform complex ideas into functional and elegant realities.",
+      "ABOUT_BTN": "About Me"
+    },
+    "SERVICES": {
+      "PRE_TITLE": "What I Offer",
+      "TITLE": "My Professional Services",
+      "CARD_1_TITLE": "Process Simulation",
+      "CARD_1_DESC": "Modeling and simulation of chemical processes to optimize efficiency and industrial production.",
+      "CARD_2_TITLE": "Full-Stack Development",
+      "CARD_2_DESC": "Building complete web applications, from the database to the final user interface.",
+      "CARD_3_TITLE": "Data Science",
+      "CARD_3_DESC": "Data analysis, machine learning, and visualizations to extract insights and predict trends.",
+      "KNOW_MORE": "Learn More"
+    }
+  },
+  "FOOTER": {
+    "COPYRIGHT": "© {{year}} Daniel Zambrano Juca. All Rights Reserved."
+  }
+}

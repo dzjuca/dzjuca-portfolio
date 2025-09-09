@@ -1,21 +1,34 @@
 <header class="header-container">
-  <!-- Sección del Logo -->
   <div class="logo">
     <a routerLink="/">dzjuca</a>
   </div>
 
-  <!-- Navegación Principal -->
-  <nav class="nav-links">
+  <nav class="main-nav">
     <ul>
-      <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
-      <li><a routerLink="/about" routerLinkActive="active-link">About</a></li>
-      <li><a routerLink="/projects" routerLinkActive="active-link">Projects</a></li>
-      <li><a routerLink="/contact" routerLinkActive="active-link">Contact</a></li>
+      <li><a routerLink="/">{{ 'HEADER.NAV.HOME' | translate }}</a></li>
+      <li><a routerLink="/about">{{ 'HEADER.NAV.ABOUT' | translate }}</a></li>
+      <li><a routerLink="/projects">{{ 'HEADER.NAV.PROJECTS' | translate }}</a></li>
+      <li><a routerLink="/contact">{{ 'HEADER.NAV.CONTACT' | translate }}</a></li>
     </ul>
   </nav>
 
-  <!-- Botón de Llamada a la Acción (Call to Action) -->
-  <div class="cta-button">
-    <a routerLink="/contact" class="btn">Contact Me</a>
+  <div class="header-actions">
+    <!-- Selector de Idioma -->
+    <div class="lang-switcher">
+      <button
+        (click)="switchLanguage('es')"
+        [class.active]="translate.currentLang === 'es'">
+        ES
+      </button>
+      <span>/</span>
+      <button
+        (click)="switchLanguage('en')"
+        [class.active]="translate.currentLang === 'en'">
+        EN
+      </button>
+    </div>
+
+    <!-- Botón de Contacto -->
+    <a routerLink="/contact" class="btn btn-primary">{{ 'HEADER.CONTACT_BTN' | translate }}</a>
   </div>
 </header>
