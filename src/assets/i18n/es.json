@@ -25,6 +25,13 @@
       "CARD_3_TITLE": "Ciencia de Datos",
       "CARD_3_DESC": "Análisis de datos, machine learning y visualizaciones para extraer insights y predecir tendencias.",
       "KNOW_MORE": "Saber Más"
+    },
+    "STATS": {
+      "YEARS_EXPERIENCE": "Años de Experiencia",
+      "COMPLETED_PROJECTS": "Proyectos Completados",
+      "CODE_COMMITS": "Commits en Proyectos",
+      "SATISFIED_CLIENTS": "Clientes Satisfechos",
+      "ACHIEVEMENTS": "Logros Obtenidos"
     }
   },
   "FOOTER": {

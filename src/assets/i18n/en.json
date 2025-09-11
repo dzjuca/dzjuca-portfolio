@@ -25,6 +25,13 @@
       "CARD_3_TITLE": "Data Science",
       "CARD_3_DESC": "Data analysis, machine learning, and visualizations to extract insights and predict trends.",
       "KNOW_MORE": "Learn More"
+    },
+    "STATS": {
+      "YEARS_EXPERIENCE": "Years of Experience",
+      "COMPLETED_PROJECTS": "Completed Projects",
+      "CODE_COMMITS": "Project Commits",
+      "SATISFIED_CLIENTS": "Satisfied Clients",
+      "ACHIEVEMENTS": "Achievements"
     }
   },
   "FOOTER": {
