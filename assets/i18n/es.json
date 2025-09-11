@@ -32,6 +32,19 @@
       "CODE_COMMITS": "Commits en Proyectos",
       "SATISFIED_CLIENTS": "Clientes Satisfechos",
       "ACHIEVEMENTS": "Logros Obtenidos"
+    },
+    "FEATURED_PROJECTS": {
+      "PRE_TITLE": "Portafolio",
+      "TITLE": "Proyectos Destacados",
+      "CATEGORY_WEB": "Desarrollo Web",
+      "CATEGORY_SIMULATION": "Simulación de Procesos",
+      "CATEGORY_DATA": "Ciencia de Datos",
+      "PROJECT_1_TITLE": "Plataforma E-commerce",
+      "PROJECT_2_TITLE": "Simulador de Reactor Químico",
+      "PROJECT_3_TITLE": "Dashboard de Ventas",
+      "PROJECT_4_TITLE": "Web App de Reservas",
+      "VIEW_PROJECT": "Ver Proyecto",
+      "VIEW_ALL_BTN": "Ver Todos los Proyectos"
     }
   },
   "FOOTER": {
