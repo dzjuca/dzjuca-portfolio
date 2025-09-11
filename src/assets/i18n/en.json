@@ -32,6 +32,19 @@
       "CODE_COMMITS": "Project Commits",
       "SATISFIED_CLIENTS": "Satisfied Clients",
       "ACHIEVEMENTS": "Achievements"
+    },
+    "FEATURED_PROJECTS": {
+      "PRE_TITLE": "Portfolio",
+      "TITLE": "Featured Projects",
+      "CATEGORY_WEB": "Web Development",
+      "CATEGORY_SIMULATION": "Process Simulation",
+      "CATEGORY_DATA": "Data Science",
+      "PROJECT_1_TITLE": "E-commerce Platform",
+      "PROJECT_2_TITLE": "Chemical Reactor Simulator",
+      "PROJECT_3_TITLE": "Sales Dashboard",
+      "PROJECT_4_TITLE": "Booking Web App",
+      "VIEW_PROJECT": "View Project",
+      "VIEW_ALL_BTN": "View All Projects"
     }
   },
   "FOOTER": {
