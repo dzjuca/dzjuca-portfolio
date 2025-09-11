@@ -1,0 +1,40 @@
+{
+  "HEADER": {
+    "NAV": {
+      "HOME": "Inicio",
+      "ABOUT": "Sobre Mí",
+      "PROJECTS": "Proyectos",
+      "CONTACT": "Contacto"
+    },
+    "CONTACT_BTN": "Contáctame"
+  },
+  "HOME": {
+    "HERO": {
+      "SUBTITLE": "Hola, soy Daniel Zambrano Juca",
+      "TITLE": "Ingeniero Químico & Desarrollador Full-Stack",
+      "DESCRIPTION": "Una fusión de ingeniería y creatividad, especializado en construir soluciones digitales robustas y experiencias de usuario intuitivas. Mi pasión es transformar ideas complejas en realidades funcionales y elegantes.",
+      "ABOUT_BTN": "Sobre Mí"
+    },
+    "SERVICES": {
+      "PRE_TITLE": "Lo que ofrezco",
+      "TITLE": "Mis Servicios Profesionales",
+      "CARD_1_TITLE": "Simulación de Procesos",
+      "CARD_1_DESC": "Modelado y simulación de procesos químicos para optimizar la eficiencia y la producción industrial.",
+      "CARD_2_TITLE": "Desarrollo Full-Stack",
+      "CARD_2_DESC": "Creación de aplicaciones web completas, desde la base de datos hasta la interfaz de usuario final.",
+      "CARD_3_TITLE": "Ciencia de Datos",
+      "CARD_3_DESC": "Análisis de datos, machine learning y visualizaciones para extraer insights y predecir tendencias.",
+      "KNOW_MORE": "Saber Más"
+    },
+    "STATS": {
+      "YEARS_EXPERIENCE": "Años de Experiencia",
+      "COMPLETED_PROJECTS": "Proyectos Completados",
+      "CODE_COMMITS": "Commits en Proyectos",
+      "SATISFIED_CLIENTS": "Clientes Satisfechos",
+      "ACHIEVEMENTS": "Logros Obtenidos"
+    }
+  },
+  "FOOTER": {
+    "COPYRIGHT": "© {{year}} Daniel Zambrano Juca. Todos los derechos reservados."
+  }
+}
