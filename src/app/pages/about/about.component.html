@@ -1,0 +1,34 @@
+<main>
+  <!-- =============================================
+       ENCABEZADO DE PÁGINA
+       ============================================= -->
+  <section class="page-header">
+    <div class="page-header-content">
+      <h1>{{ 'ABOUT.PAGE_TITLE' | translate }}</h1>
+      <p>{{ 'ABOUT.PAGE_SUBTITLE' | translate }}</p>
+    </div>
+  </section>
+
+  <!-- =============================================
+       CONTENIDO SOBRE MÍ
+       ============================================= -->
+  <section class="about-intro-section">
+    <div class="about-intro-container">
+      <div class="about-intro-image">
+        <img src="assets/images/about-me-profile.jpg" alt="Retrato profesional de Daniel Zambrano Juca">
+      </div>
+      <div class="about-intro-text">
+        <h5 class="subtitle">{{ 'ABOUT.INTRO_GREETING' | translate }}</h5>
+        <p>{{ 'ABOUT.INTRO_P1' | translate }}</p>
+        <p>{{ 'ABOUT.INTRO_P2' | translate }}</p>
+        <!-- Aquí podríamos añadir enlaces a redes sociales en el futuro -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================================
+       SECCIÓN DE ESTADÍSTICAS (REUTILIZADA)
+       ============================================= -->
+  <app-stats></app-stats>
+
+</main>

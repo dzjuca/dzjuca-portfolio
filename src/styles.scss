@@ -52,3 +52,36 @@ body {
   }
 }
 
+/* =============================================
+   Estilos Globales de Encabezado de Página
+   ============================================= */
+.page-header {
+  background-color: var(--color-bg-medium);
+  padding: 5rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-header-content {
+  max-width: 800px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: var(--color-text-medium);
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
