@@ -47,7 +47,7 @@
       "VIEW_ALL_BTN": "Ver Todos los Proyectos"
     }
   },
-    "ABOUT": {
+  "ABOUT": {
     "PAGE_TITLE": "Sobre Mí",
     "PAGE_SUBTITLE": "Un vistazo a mi trayectoria, mis habilidades y lo que me apasiona.",
     "INTRO_GREETING": "Hola, soy Daniel Zambrano",
@@ -56,5 +56,8 @@
   },
   "FOOTER": {
     "COPYRIGHT": "© {{year}} Daniel Zambrano Juca. Todos los derechos reservados."
+  },
+  "GLOBAL": {
+    "CONSTRUCTION_NOTICE": "En Construcción"
   }
 }
