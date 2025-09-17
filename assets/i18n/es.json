@@ -47,6 +47,13 @@
       "VIEW_ALL_BTN": "Ver Todos los Proyectos"
     }
   },
+    "ABOUT": {
+    "PAGE_TITLE": "Sobre Mí",
+    "PAGE_SUBTITLE": "Un vistazo a mi trayectoria, mis habilidades y lo que me apasiona.",
+    "INTRO_GREETING": "Hola, soy Daniel Zambrano",
+    "INTRO_P1": "Desde que descubrí la programación, he estado en un viaje constante de aprendizaje y creación. Mi formación como Ingeniero Químico me dio una base sólida en la resolución de problemas y el pensamiento analítico, habilidades que ahora aplico para construir soluciones de software eficientes y robustas.",
+    "INTRO_P2": "Me especializo en el desarrollo Full-Stack, con un profundo interés en cómo los datos pueden transformar negocios. Disfruto trabajando en todo el ciclo de vida del producto, desde la conceptualización y el diseño de la UI/UX hasta la implementación del backend y el despliegue."
+  },
   "FOOTER": {
     "COPYRIGHT": "© {{year}} Daniel Zambrano Juca. Todos los derechos reservados."
   }
