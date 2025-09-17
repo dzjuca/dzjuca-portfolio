@@ -1,0 +1,30 @@
+.construction-banner {
+  // Posicionamiento
+  position: fixed;
+  top: 50px;      // <-- Aumentamos este valor para bajar el banner
+  right: -40px;   // <-- Hacemos este valor menos negativo para moverlo a la izquierda
+  z-index: 9999;  // Nos aseguramos de que esté por encima de todo
+
+  // Rotación para el efecto de cinta
+  transform: rotate(35deg);
+
+  // Estilos visuales
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  padding: 0.5rem 3rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--color-accent);
+  width: 200px; // Ancho de la cinta
+}
+
+// Opcional: Ocultar el banner en pantallas muy pequeñas donde puede molestar
+@media (max-width: 600px) {
+  .construction-banner {
+    display: none;
+  }
+}
