@@ -22,6 +22,14 @@
         <p>{{ 'ABOUT.INTRO_P1' | translate }}</p>
         <p>{{ 'ABOUT.INTRO_P2' | translate }}</p>
         <!-- Aquí podríamos añadir enlaces a redes sociales en el futuro -->
+  <!-- Iconos de Redes Sociales (NUEVO) -->
+          <div class="social-links">
+            <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank" [title]="link.name">
+              <!-- Esta es la nueva etiqueta para mostrar los SVGs -->
+              <svg-icon [src]="link.iconPath"></svg-icon>
+            </a>
+          </div>
+
       </div>
     </div>
   </section>

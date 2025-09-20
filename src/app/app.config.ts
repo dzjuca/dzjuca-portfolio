@@ -3,6 +3,7 @@ import { provideRouter } from '@angular/router';
 import { HttpClient, provideHttpClient } from '@angular/common/http'; // <-- Imports actualizados
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader, TRANSLATE_HTTP_LOADER_CONFIG } from '@ngx-translate/http-loader';
+import { AngularSvgIconModule } from 'angular-svg-icon'; // <-- Importa el módulo correcto
 
 import { routes } from './app.routes';
 
@@ -22,9 +23,10 @@ export const appConfig: ApplicationConfig = {
           useClass: TranslateHttpLoader
         },
         defaultLanguage: 'es'
-      })
+      }),
+      // Añade el módulo de iconos SVG, separado por una coma.
+      AngularSvgIconModule.forRoot()
     ),
-
     // 2. Proveemos la configuración para TranslateHttpLoader usando su InjectionToken.
     {
       provide: TRANSLATE_HTTP_LOADER_CONFIG,

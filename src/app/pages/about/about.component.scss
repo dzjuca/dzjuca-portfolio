@@ -36,6 +36,33 @@
   }
 }
 
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+
+  a {
+    color: var(--color-text-medium);
+    transition: color 0.3s ease, transform 0.3s ease;
+ 
+    // Para dimensionar el SVG, debemos apuntar al elemento <svg> que está
+    // DENTRO del componente <svg-icon>. Usamos ::ng-deep para que el estilo
+    // "penetre" la encapsulación de estilos del componente hijo.
+    ::ng-deep svg {
+      width: 28px;
+      height: 28px;
+      // Esta es la clave: "currentColor" hace que el SVG herede el color del
+      // enlace <a>. Así, el ícono reaccionará al :hover como el texto.
+      fill: currentColor;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+      transform: translateY(-3px);
+    }
+  }
+}
+
 // --- Responsive ---
 @media (max-width: 992px) {
   .about-intro-container {
@@ -50,5 +77,9 @@
 
   .about-intro-text {
     text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
   }
 }
