@@ -1,0 +1,12 @@
+<div class="project-card">
+   <img [src]="project.image" [alt]="project.titleKey | translate" class="project-image">
+   <div class="project-overlay">
+    <div class="project-info">
+    <span class="project-category">{{ project.categoryKey | translate }}</span>
+    <h3 class="project-title">{{ project.titleKey | translate }}</h3>
+    <a [routerLink]="project.link" class="project-link">
+        {{ 'HOME.FEATURED_PROJECTS.VIEW_PROJECT' | translate }}
+    </a>
+    </div>
+</div>
+</div>

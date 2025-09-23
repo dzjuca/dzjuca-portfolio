@@ -1,0 +1,33 @@
+<main>
+  <!-- Encabezado de página reutilizable -->
+  <section class="page-header">
+    <div class="page-header-content">
+      <h1>{{ 'PROJECTS.PAGE_TITLE' | translate }}</h1>
+      <p>{{ 'PROJECTS.PAGE_SUBTITLE' | translate }}</p>
+    </div>
+  </section>
+
+  <!-- Sección de la galería de proyectos -->
+  <section class="projects-gallery-section">
+    <div class="projects-gallery-container">
+      <!-- Controles de filtro -->
+      <div class="filter-controls">
+        <button
+          *ngFor="let category of categories"
+          class="filter-btn"
+          [class.active]="category === selectedCategory"
+          (click)="filterProjects(category)">
+          {{ 'PROJECTS.FILTER_' + category.toUpperCase() | translate }}
+        </button>
+      </div>
+
+      <!-- Cuadrícula de proyectos -->
+      <div class="projects-grid">
+        <app-project-card
+          *ngFor="let project of filteredProjects"
+          [project]="project">
+        </app-project-card>
+      </div>
+    </div>
+  </section>
+</main>

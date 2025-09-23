@@ -4,17 +4,14 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 
-// Definimos una interfaz para tipar nuestros proyectos
-interface Project {
-  image: string;
-  categoryKey: string;
-  titleKey: string;
-  link: string;
-}
+import { Project } from '../../../../models/project.model'; // <-- Importa el modelo
+import { ProjectCardComponent } from '../../../../shared/components/project-card/project-card.component'; // <-- Importa el nuevo componente
+
 
 @Component({
   selector: 'app-featured-projects',
-  imports: [CommonModule, RouterModule, TranslateModule],
+  standalone: true,
+  imports: [CommonModule, RouterModule, TranslateModule, ProjectCardComponent],
   templateUrl: './featured-projects.component.html',
   styleUrl: './featured-projects.component.scss'
 })
