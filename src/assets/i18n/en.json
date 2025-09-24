@@ -65,6 +65,19 @@
     "FILTER_SIMULATION": "Simulation",
     "FILTER_DATA": "Data Science"
   },
+  "CONTACT": {
+    "PAGE_TITLE": "Let's Talk",
+    "PAGE_SUBTITLE": "Have a project in mind or just want to say hello? Feel free to reach out.",
+    "INFO_TITLE": "Contact Information",
+    "INFO_EMAIL": "Email",
+    "INFO_PHONE": "Phone",
+    "FORM_NAME": "Your Name",
+    "FORM_EMAIL": "Your Email",
+    "FORM_MESSAGE": "Your Message",
+    "FORM_SUBMIT_BTN": "Send Message",
+    "FORM_SUCCESS": "Message sent successfully! Thank you for reaching out.",
+    "FORM_ERROR": "There was an error sending the message. Please try again."
+  },
   "FOOTER": {
     "COPYRIGHT": "© {{year}} Daniel Zambrano Juca. All Rights Reserved."
   },

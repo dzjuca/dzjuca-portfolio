@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 export const routes: Routes = [
@@ -16,6 +17,10 @@ export const routes: Routes = [
   {
     path: 'projects', // <-- Nueva ruta
     loadComponent: () => import('./pages/projects/projects.component').then(m => m.ProjectsComponent)
+  },
+  {
+    path: 'contact', // <-- Nueva ruta
+    loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent)
   },
   // Esta ruta es importante: si alguien escribe una URL que no existe, lo redirige a la home.
   {
