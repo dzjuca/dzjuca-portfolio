@@ -54,6 +54,9 @@
     "INTRO_P1": "Ever since I discovered programming, I've been on a constant journey of learning and creating. My background as a Chemical Engineer gave me a solid foundation in problem-solving and analytical thinking, skills I now apply to build efficient and robust software solutions.",
     "INTRO_P2": "I specialize in Full-Stack development, with a deep interest in how data can transform businesses. I enjoy working across the entire product lifecycle, from conceptualization and UI/UX design to backend implementation and deployment."
   },
+  "TECH_STACK": {
+    "TITLE": "My Tech Stack"
+  },
   "PROJECTS": {
     "PAGE_TITLE": "My Projects",
     "PAGE_SUBTITLE": "A collection of my work in web development, data science, and more.",

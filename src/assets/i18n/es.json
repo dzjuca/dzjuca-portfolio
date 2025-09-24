@@ -54,6 +54,9 @@
     "INTRO_P1": "Desde que descubrí la programación, he estado en un viaje constante de aprendizaje y creación. Mi formación como Ingeniero Químico me dio una base sólida en la resolución de problemas y el pensamiento analítico, habilidades que ahora aplico para construir soluciones de software eficientes y robustas.",
     "INTRO_P2": "Me especializo en el desarrollo Full-Stack, con un profundo interés en cómo los datos pueden transformar negocios. Disfruto trabajando en todo el ciclo de vida del producto, desde la conceptualización y el diseño de la UI/UX hasta la implementación del backend y el despliegue."
   },
+  "TECH_STACK": {
+    "TITLE": "Mi Stack Tecnológico"
+  },
   "PROJECTS": {
     "PAGE_TITLE": "Mis Proyectos",
     "PAGE_SUBTITLE": "Una colección de mi trabajo en desarrollo web, ciencia de datos y más.",

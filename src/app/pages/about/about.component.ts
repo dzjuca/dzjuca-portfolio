@@ -3,11 +3,13 @@ import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common'; // 1. Importa
 import { StatsComponent } from '../home/components/stats/stats.component';
 import { AngularSvgIconModule } from 'angular-svg-icon'; // <-- Importa el módulo SVG
+import { TechStackComponent } from '../../shared/components/tech-stack/tech-stack.component'; // <-- Importa
+
 
 @Component({
   selector: 'app-about',
   standalone: true, // <-- Asegúrate de que esta línea esté presente
-  imports: [TranslateModule, StatsComponent, AngularSvgIconModule, CommonModule],
+  imports: [TranslateModule, StatsComponent, AngularSvgIconModule, CommonModule, TechStackComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })

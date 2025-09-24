@@ -23,25 +23,29 @@ export class FeaturedProjectsComponent {
       image: 'assets/images/project-1.jpg',
       categoryKey: 'HOME.FEATURED_PROJECTS.CATEGORY_WEB',
       titleKey: 'HOME.FEATURED_PROJECTS.PROJECT_1_TITLE',
-      link: '/projects/ecommerce-platform'
+      link: '/projects/ecommerce-platform',
+      category: 'web'
     },
     {
       image: 'assets/images/project-2.jpg',
       categoryKey: 'HOME.FEATURED_PROJECTS.CATEGORY_SIMULATION',
       titleKey: 'HOME.FEATURED_PROJECTS.PROJECT_2_TITLE',
-      link: '/projects/chemical-reactor'
+      link: '/projects/chemical-reactor',
+      category: 'simulation'
     },
     {
       image: 'assets/images/project-3.jpg',
       categoryKey: 'HOME.FEATURED_PROJECTS.CATEGORY_DATA',
       titleKey: 'HOME.FEATURED_PROJECTS.PROJECT_3_TITLE',
-      link: '/projects/sales-dashboard'
+      link: '/projects/sales-dashboard',
+      category: 'data'
     },
     {
       image: 'assets/images/project-4.jpg',
       categoryKey: 'HOME.FEATURED_PROJECTS.CATEGORY_WEB',
       titleKey: 'HOME.FEATURED_PROJECTS.PROJECT_4_TITLE',
-      link: '/projects/booking-app'
+      link: '/projects/booking-app',
+      category: 'web'
     }
   ];
 
