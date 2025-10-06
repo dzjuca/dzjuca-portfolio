@@ -40,3 +40,12 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+ .env
+ .env.local
+ .env.development.local
+ .env.test.local
+ .env.production.local
+# Ignorar el archivo de entorno de producción para no exponer claves
+/src/environments/environment.prod.ts
+
+
