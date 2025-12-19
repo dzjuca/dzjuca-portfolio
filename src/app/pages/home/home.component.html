@@ -4,7 +4,27 @@
       <h5 class="subtitle">{{ 'HOME.HERO.SUBTITLE' | translate }}</h5>
       <h1 class="title">{{ 'HOME.HERO.TITLE' | translate }}</h1>
       <p class="description">{{ 'HOME.HERO.DESCRIPTION' | translate }}</p>
-      <a routerLink="/about" class="btn btn-primary">{{ 'HOME.HERO.ABOUT_BTN' | translate }}</a>
+
+      <div class="hero-actions">
+
+        <a routerLink="/about" class="btn btn-primary">
+          {{ 'HOME.HERO.ABOUT_BTN' | translate }}
+        </a>
+
+        <a [href]="currentCvUrl"
+          [download]="'CV_Daniel_Zambrano_' + (translate.currentLang === 'es' ? 'ES' : 'EN') + '.pdf'"
+          class="btn btn-cv">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          {{ 'HOME.HERO.DOWNLOAD_CV' | translate }}
+        </a>
+
+      </div>
+
     </div>
     <div class="hero-image">
       <img src="assets/images/hero-profile3.jpg" alt="Retrato de Daniel Juca" />
@@ -13,7 +33,7 @@
 
   <!-- Aquí irán las otras secciones de la página de inicio -->
 
-    <!-- =============================================
+  <!-- =============================================
        SECCIÓN DE SERVICIOS 
        ============================================= -->
   <section class="services-section">
@@ -37,7 +57,8 @@
           <img src="assets/icons/icon-fullstack-dev.svg" alt="Icono de Desarrollo Full-Stack" class="card-icon">
           <h3 class="card-title">{{ 'HOME.SERVICES.CARD_2_TITLE' | translate }}</h3>
           <p class="card-description">{{ 'HOME.SERVICES.CARD_2_DESC' | translate }}</p>
-          <a routerLink="/services/fullstack-development" class="card-link">{{ 'HOME.SERVICES.KNOW_MORE' | translate }}</a>
+          <a routerLink="/services/fullstack-development" class="card-link">{{ 'HOME.SERVICES.KNOW_MORE' | translate
+            }}</a>
         </div>
 
         <!-- Tarjeta de Servicio 3 -->
@@ -51,12 +72,12 @@
     </div>
   </section>
 
-    <!-- =============================================
+  <!-- =============================================
        SECCIÓN DE ESTADÍSTICAS (NUEVO CÓDIGO)
        ============================================= -->
   <app-stats></app-stats>
 
-    <!-- =============================================
+  <!-- =============================================
        SECCIÓN DE PROYECTOS DESTACADOS (NUEVO)
        ============================================= -->
   <app-featured-projects></app-featured-projects>

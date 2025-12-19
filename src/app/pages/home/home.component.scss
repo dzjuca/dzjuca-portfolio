@@ -232,3 +232,52 @@
     transform: translateY(0); // Quitamos el efecto en tablet/móvil
   }
 }
+
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  align-items: center;
+
+  // En móviles, centramos los botones y los ponemos uno sobre otro
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+
+    .btn {
+      width: 100%; // Botones de ancho completo en móvil
+      max-width: 300px;
+    }
+  }
+}
+
+.btn-cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.05); // Efecto cristal
+  color: var(--color-text-light);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); // Animación con "rebote"
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-primary); // Brillo con tu color rojo
+    transform: translateY(-5px); // Levanta el botón al pasar el mouse
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
+    svg {
+      transform: translateY(3px); // El icono de flecha baja un poquito (efecto descarga)
+      color: var(--color-primary);
+    }
+  }
+}
