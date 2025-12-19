@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { environment } from '../../../environments/environment';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [    
+  imports: [
     CommonModule,
     TranslateModule,
     AngularSvgIconModule,
@@ -16,7 +18,11 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
+
 export class ContactComponent {
+
+
+  public isSubmitting: boolean = false;
 
   // --- Propiedades Públicas ---
   public contactForm!: FormGroup; // Usamos '!' para indicar a TS que será inicializado en el constructor.
@@ -30,7 +36,8 @@ export class ContactComponent {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.required, Validators.minLength(10)]]
+      message: ['', [Validators.required, Validators.minLength(10)]],
+      honeypot: ['']
     });
     // Creamos el enlace del teléfono sin espacios
     this.contactPhoneLink = 'tel:' + this.contactPhone.replace(/\s/g, '');
@@ -38,21 +45,43 @@ export class ContactComponent {
 
   // --- Métodos Públicos ---
   onSubmit() {
+
+    // 1. Verificamos si el bot cayó en la trampa
+    if (this.contactForm.value.honeypot) {
+      console.log('Bot detectado!');
+      this.contactForm.reset();
+      return; // Detenemos la ejecución aquí
+    }
+
+    // 2. Si el humano es real, seguimos con el envío...
     if (this.contactForm.valid) {
-      console.log('Formulario Enviado:', this.contactForm.value);
-      // Aquí iría la lógica para enviar el formulario a un backend.
-      
-      // Usamos el servicio de traducción para obtener el mensaje de éxito
-      this.translate.get('CONTACT.FORM_SUCCESS').subscribe((res: string) => {
-        alert(res);
-        this.contactForm.reset();
-      });
-    } else {
-      console.log('Formulario inválido');
-      // Usamos el servicio de traducción para obtener el mensaje de error
-      this.translate.get('CONTACT.FORM_ERROR').subscribe((res: string) => {
-        alert(res);
-      });
+      this.isSubmitting = true; // 1. Bloqueamos el botón
+      // 2. Extraemos los valores del formulario
+      const templateParams = {
+        name: this.contactForm.value.name,
+        email: this.contactForm.value.email,
+        message: this.contactForm.value.message,
+      };
+      // 3. Enviamos a EmailJS usando tus claves del environment
+      emailjs.send(
+        environment.emailjs.serviceId,
+        environment.emailjs.templateId,
+        templateParams,
+        environment.emailjs.publicKey
+      )
+        .then(() => {
+          // ÉXITO
+          this.translate.get('CONTACT.FORM_SUCCESS').subscribe(res => alert(res));
+          this.contactForm.reset();
+        })
+        .catch((error) => {
+          // ERROR
+          console.error('EmailJS Error:', error);
+          this.translate.get('CONTACT.FORM_ERROR').subscribe(res => alert(res));
+        })
+        .finally(() => {
+          this.isSubmitting = false; // 4. Desbloqueamos el botón pase lo que pase
+        });
     }
   }
 }

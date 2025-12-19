@@ -44,8 +44,13 @@
             <label for="message">{{ 'CONTACT.FORM_MESSAGE' | translate }}</label>
             <textarea id="message" formControlName="message" rows="5" class="form-control"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">
-            {{ 'CONTACT.FORM_SUBMIT_BTN' | translate }}
+          <!-- Campo Honeypot (Invisible para humanos) -->
+          <div style="display:none;">
+            <label>Si ves esto, no rellenes nada</label>
+            <input type="text" formControlName="honeypot">
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid || isSubmitting">
+            {{ (isSubmitting ? 'CONTACT.FORM_SENDING' : 'CONTACT.FORM_SUBMIT_BTN') | translate }}
           </button>
         </form>
       </div>
