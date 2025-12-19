@@ -75,6 +75,7 @@
     "FORM_EMAIL": "Your Email",
     "FORM_MESSAGE": "Your Message",
     "FORM_SUBMIT_BTN": "Send Message",
+    "FORM_SENDING": "Sending...",
     "FORM_SUCCESS": "Message sent successfully! Thank you for reaching out.",
     "FORM_ERROR": "There was an error sending the message. Please try again."
   },
